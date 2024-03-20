@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BD03A004-F3AD-45F4-BEDD-A72EB64B9E54}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Base</RootNamespace>
+    <AssemblyName>Base</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\..\..\MACHINE\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\..\..\MACHINE\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FORM\COMMON\FRMKeypad_English.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\COMMON\FRMKeypad_English.Designer.cs">
+      <DependentUpon>FRMKeypad_English.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\COMMON\FRMLoginCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\COMMON\FRMLoginCreate.Designer.cs">
+      <DependentUpon>FRMLoginCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\COMMON\FRMLoginManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\COMMON\FRMLoginManager.Designer.cs">
+      <DependentUpon>FRMLoginManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\FRMBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\FRMBase.Designer.cs">
+      <DependentUpon>FRMBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\Main_Panel\FRMLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\Main_Panel\FRMLogin.Designer.cs">
+      <DependentUpon>FRMLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\Side_Panel\FRMBottom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\Side_Panel\FRMBottom.Designer.cs">
+      <DependentUpon>FRMBottom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\Side_Panel\FRMLeft.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\Side_Panel\FRMLeft.Designer.cs">
+      <DependentUpon>FRMLeft.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\Side_Panel\FRMTop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\Side_Panel\FRMTop.Designer.cs">
+      <DependentUpon>FRMTop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Function\CManageJob.cs" />
+    <Compile Include="Function\CManageLog.cs" />
+    <Compile Include="Function\CManageSystem.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Thread\CThAlarm.cs" />
+    <Compile Include="Thread\CThIO.cs" />
+    <Compile Include="Thread\CThStatus.cs" />
+    <Compile Include="Value\CVo.cs" />
+    <EmbeddedResource Include="FORM\COMMON\FRMKeypad_English.resx">
+      <DependentUpon>FRMKeypad_English.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\COMMON\FRMLoginCreate.resx">
+      <DependentUpon>FRMLoginCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\COMMON\FRMLoginManager.resx">
+      <DependentUpon>FRMLoginManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\FRMBase.resx">
+      <DependentUpon>FRMBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\Main_Panel\FRMLogin.resx">
+      <DependentUpon>FRMLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\Side_Panel\FRMBottom.resx">
+      <DependentUpon>FRMBottom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\Side_Panel\FRMLeft.resx">
+      <DependentUpon>FRMLeft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\Side_Panel\FRMTop.resx">
+      <DependentUpon>FRMTop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Control\" />
+    <Folder Include="Module\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
